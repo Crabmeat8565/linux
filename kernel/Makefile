@@ -117,6 +117,7 @@ obj-$(CONFIG_HAVE_STATIC_CALL) += static_call.o
 obj-$(CONFIG_HAVE_STATIC_CALL_INLINE) += static_call_inline.o
 obj-$(CONFIG_CFI_CLANG) += cfi.o
 obj-$(CONFIG_NUMA) += numa.o
+obj-$(CONFIG_INSTR_PROFILE_CLANG) += clang_instr_profile/
 
 obj-$(CONFIG_PERF_EVENTS) += events/
 

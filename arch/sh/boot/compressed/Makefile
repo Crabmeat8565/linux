@@ -13,6 +13,7 @@ targets := vmlinux vmlinux.bin vmlinux.bin.gz vmlinux.bin.bz2 \
 
 GCOV_PROFILE := n
 UBSAN_SANITIZE := n
+INSTR_PROFILE := n
 
 #
 # IMAGE_OFFSET is the load offset of the compression loader

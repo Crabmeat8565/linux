@@ -63,6 +63,7 @@ CFLAGS_REMOVE_vdso.o = $(CC_FLAGS_FTRACE)
 GCOV_PROFILE := n
 UBSAN_SANITIZE := n
 KCOV_INSTRUMENT := n
+CLANG_INSTR_PROFILE := n
 
 # Check that we don't have PIC 'jalr t9' calls left
 quiet_cmd_vdso_mips_check = VDSOCHK $@

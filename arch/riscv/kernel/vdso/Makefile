@@ -43,6 +43,7 @@ GCOV_PROFILE := n
 KCOV_INSTRUMENT := n
 KASAN_SANITIZE := n
 UBSAN_SANITIZE := n
+CLANG_INSTR_PROFILE := n
 
 # Force dependency
 $(obj)/vdso.o: $(obj)/vdso.so
