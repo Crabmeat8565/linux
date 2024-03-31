@@ -101,11 +101,12 @@ KBUILD_CFLAGS += -fno-asynchronous-unwind-tables -fno-unwind-tables
 # KVM nVHE code is run at a different exception code with a different map, so
 # compiler instrumentation that inserts callbacks or checks into the code may
 # cause crashes. Just disable it.
-GCOV_PROFILE	:= n
-KASAN_SANITIZE	:= n
-KCSAN_SANITIZE	:= n
-UBSAN_SANITIZE	:= n
-KCOV_INSTRUMENT	:= n
+GCOV_PROFILE		:= n
+KASAN_SANITIZE		:= n
+KCSAN_SANITIZE		:= n
+UBSAN_SANITIZE		:= n
+KCOV_INSTRUMENT		:= n
+CLANG_INSTR_PROFILE	:= n
 
 # Skip objtool checking for this directory because nVHE code is compiled with
 # non-standard build rules.
