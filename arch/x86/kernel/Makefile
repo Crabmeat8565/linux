@@ -3,6 +3,8 @@
 # Makefile for the linux kernel.
 #
 
+CLANG_INSTR_PROFILE_callthunks.o := n
+
 extra-y	+= vmlinux.lds
 
 CPPFLAGS_vmlinux.lds += -U$(UTS_MACHINE)
