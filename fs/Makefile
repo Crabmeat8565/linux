@@ -6,6 +6,7 @@
 # Rewritten to use lists instead of if-statements.
 # 
 
+CLANG_INSTR_PROFILE_coredump.o := n
 
 obj-y :=	open.o read_write.o file_table.o super.o \
 		char_dev.o stat.o exec.o pipe.o namei.o fcntl.o \
