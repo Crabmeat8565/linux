@@ -19,6 +19,7 @@ KCOV_INSTRUMENT_early.o		:= n
 UBSAN_SANITIZE_early.o		:= n
 KASAN_SANITIZE_ipl.o		:= n
 KASAN_SANITIZE_machine_kexec.o	:= n
+CLANG_INSTR_PROFILE_early.o	:= n
 
 #
 # Passing null pointers is ok for smp code, since we access the lowcore here.

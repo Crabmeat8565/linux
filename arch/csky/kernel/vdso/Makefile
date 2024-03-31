@@ -26,6 +26,7 @@ CPPFLAGS_vdso.lds += -P -C -U$(ARCH)
 # Disable gcov profiling for VDSO code
 GCOV_PROFILE := n
 KCOV_INSTRUMENT := n
+CLANG_INSTR_PROFILE := n
 
 # Force dependency
 $(obj)/vdso.o: $(obj)/vdso.so
