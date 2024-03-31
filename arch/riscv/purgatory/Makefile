@@ -48,11 +48,12 @@ LDFLAGS_purgatory.chk := $(PURGATORY_LDFLAGS)
 targets += purgatory.ro purgatory.chk
 
 # Sanitizer, etc. runtimes are unavailable and cannot be linked here.
-GCOV_PROFILE	:= n
-KASAN_SANITIZE	:= n
-UBSAN_SANITIZE	:= n
-KCSAN_SANITIZE	:= n
-KCOV_INSTRUMENT := n
+GCOV_PROFILE		:= n
+KASAN_SANITIZE		:= n
+UBSAN_SANITIZE		:= n
+KCSAN_SANITIZE		:= n
+KCOV_INSTRUMENT		:= n
+CLANG_INSTR_PROFILE	:= n
 
 # These are adjustments to the compiler flags used for objects that
 # make up the standalone purgatory.ro
