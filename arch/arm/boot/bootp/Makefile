@@ -5,8 +5,8 @@
 # This file is included by the global makefile so that you can add your own
 # architecture-specific flags and dependencies.
 #
-
-GCOV_PROFILE	:= n
+GCOV_PROFILE		:= n
+CLANG_INSTR_PROFILE	:= n
 
 LDFLAGS_bootp	:= --no-undefined -X \
 		 --defsym initrd_phys=$(INITRD_PHYS) \

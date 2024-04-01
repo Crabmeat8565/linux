@@ -26,6 +26,7 @@ endif
 
 # Disable gcov profiling for VDSO code
 GCOV_PROFILE := n
+CLANG_INSTR_PROFILE := n
 
 # Force dependency
 $(obj)/vdso.o: $(obj)/vdso.so

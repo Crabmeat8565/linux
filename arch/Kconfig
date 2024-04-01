@@ -966,6 +966,7 @@ config ARCH_HAS_MEM_ENCRYPT
 	bool
 
 source "kernel/gcov/Kconfig"
+source "kernel/clang_instr_profile/Kconfig"
 
 source "scripts/gcc-plugins/Kconfig"
 

@@ -72,6 +72,7 @@ CFLAGS_REMOVE_vdso.o = -pg
 
 GCOV_PROFILE := n
 UBSAN_SANITIZE := n
+CLANG_INSTR_PROFILE := n
 
 #
 # Shared build commands.

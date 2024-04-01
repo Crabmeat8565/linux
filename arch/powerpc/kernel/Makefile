@@ -163,18 +163,22 @@ endif
 GCOV_PROFILE_prom_init.o := n
 KCOV_INSTRUMENT_prom_init.o := n
 UBSAN_SANITIZE_prom_init.o := n
+CLANG_INSTR_PROFILE_prom_init.o := n
 GCOV_PROFILE_machine_kexec_64.o := n
 KCOV_INSTRUMENT_machine_kexec_64.o := n
 UBSAN_SANITIZE_machine_kexec_64.o := n
 GCOV_PROFILE_machine_kexec_32.o := n
 KCOV_INSTRUMENT_machine_kexec_32.o := n
 UBSAN_SANITIZE_machine_kexec_32.o := n
+CLANG_INSTR_PROFILE_machine_kexec_32.o := n
 GCOV_PROFILE_kprobes.o := n
 KCOV_INSTRUMENT_kprobes.o := n
 UBSAN_SANITIZE_kprobes.o := n
+CLANG_INSTR_PROFILE_kprobes.o := n
 GCOV_PROFILE_kprobes-ftrace.o := n
 KCOV_INSTRUMENT_kprobes-ftrace.o := n
 UBSAN_SANITIZE_kprobes-ftrace.o := n
+CLANG_INSTR_PROFILE_kprobes-ftrace.o := n
 UBSAN_SANITIZE_vdso.o := n
 
 # Necessary for booting with kcov enabled on book3e machines

@@ -117,6 +117,7 @@ quiet_cmd_vdso = VDSO    $@
 
 VDSO_LDFLAGS = -shared --hash-style=both --build-id -Bsymbolic
 GCOV_PROFILE := n
+CLANG_INSTR_PROFILE := n
 
 #
 # Install the unstripped copies of vdso*.so.  If our toolchain supports
