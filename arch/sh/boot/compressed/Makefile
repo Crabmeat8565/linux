@@ -13,6 +13,7 @@ targets		:= vmlinux vmlinux.bin vmlinux.bin.gz \
 OBJECTS = $(obj)/head_32.o $(obj)/misc.o $(obj)/cache.o
 
 GCOV_PROFILE := n
+INSTR_PROFILE := n
 
 #
 # IMAGE_OFFSET is the load offset of the compression loader

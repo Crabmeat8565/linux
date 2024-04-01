@@ -887,6 +887,8 @@ static const char *const section_white_list[] =
 	".fmt_slot*",			/* EZchip */
 	".gnu.lto*",
 	".discard.*",
+	"__llvm_covfun",
+	"__llvm_covmap",
 	NULL
 };
 
