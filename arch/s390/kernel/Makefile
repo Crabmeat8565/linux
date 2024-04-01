@@ -25,6 +25,9 @@ UBSAN_SANITIZE_early_nobss.o	:= n
 
 KASAN_SANITIZE_early_nobss.o	:= n
 
+CLANG_INSTR_PROFILE_early.o		:= n
+CLANG_INSTR_PROFILE_early_nobss.o	:= n
+
 #
 # Passing null pointers is ok for smp code, since we access the lowcore here.
 #

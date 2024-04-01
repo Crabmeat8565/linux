@@ -18,6 +18,7 @@ ccflags-y += -nostdlib -Wl,-soname=linux-vdso.so.1 \
 
 # Disable gcov profiling for VDSO code
 GCOV_PROFILE := n
+CLANG_INSTR_PROFILE := n
 
 # Workaround for bare-metal (ELF) toolchains that neglect to pass -shared
 # down to collect2, resulting in silent corruption of the vDSO image.

@@ -5,6 +5,7 @@ subdir-ccflags-$(CONFIG_PPC_WERROR) += -Werror
 
 GCOV_PROFILE := n
 UBSAN_SANITIZE := n
+CLANG_INSTR_PROFILE := n
 
 # Disable ftrace for the entire directory
 ORIG_CFLAGS := $(KBUILD_CFLAGS)

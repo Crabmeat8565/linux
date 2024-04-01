@@ -877,6 +877,7 @@ config ARCH_USE_MEMREMAP_PROT
 	bool
 
 source "kernel/gcov/Kconfig"
+source "kernel/clang_instr_profile/Kconfig"
 
 source "scripts/gcc-plugins/Kconfig"
 

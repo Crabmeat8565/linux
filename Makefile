@@ -619,6 +619,9 @@ endif
 # Defaults to vmlinux, but the arch makefile usually adds further targets
 all: vmlinux
 
+CFLAGS_SCC_CLANG := -fprofile-instr-generate -fcoverage-mapping
+export CFLAGS_SCC_CLANG
+
 CFLAGS_GCOV	:= -fprofile-arcs -ftest-coverage \
 	$(call cc-option,-fno-tree-loop-im) \
 	$(call cc-disable-warning,maybe-uninitialized,)

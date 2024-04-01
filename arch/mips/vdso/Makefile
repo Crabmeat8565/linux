@@ -49,6 +49,7 @@ VDSO_LDFLAGS := \
 	$(call cc-ldoption, -Wl$(comma)--build-id)
 
 GCOV_PROFILE := n
+CLANG_INSTR_PROFILE := n
 
 #
 # Shared build commands.
