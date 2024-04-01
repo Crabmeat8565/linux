@@ -20,3 +20,4 @@ endif
 GCOV_PROFILE_core_$(BITS).o := n
 KCOV_INSTRUMENT_core_$(BITS).o := n
 UBSAN_SANITIZE_core_$(BITS).o := n
+CLANG_INSTR_PROFILE_core_$(BITS).o := n

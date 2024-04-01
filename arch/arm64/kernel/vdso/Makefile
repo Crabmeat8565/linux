@@ -44,6 +44,7 @@ endif
 
 # Disable gcov profiling for VDSO code
 GCOV_PROFILE := n
+CLANG_INSTR_PROFILE := n
 
 obj-y += vdso.o
 targets += vdso.lds

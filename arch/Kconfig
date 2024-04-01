@@ -1066,6 +1066,7 @@ config ARCH_SPLIT_ARG64
 	   pairs of 32-bit arguments, select this option.
 
 source "kernel/gcov/Kconfig"
+source "kernel/clang_instr_profile/Kconfig"
 
 source "scripts/gcc-plugins/Kconfig"
 

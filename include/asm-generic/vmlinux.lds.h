@@ -316,6 +316,54 @@
 #define THERMAL_TABLE(name)
 #endif
 
+#ifdef CONFIG_INSTR_PROFILE_CLANG
+#define INSTR_PROFILE_CLANG_DATA							\
+	__llvm_prf_data : AT(ADDR(__llvm_prf_data) - LOAD_OFFSET) {	\
+		__llvm_prf_start = .;					\
+		__llvm_prf_data_start = .;				\
+		*(__llvm_prf_data)					\
+		__llvm_prf_data_end = .;				\
+	}								\
+	__llvm_prf_cnts : AT(ADDR(__llvm_prf_cnts) - LOAD_OFFSET) {	\
+		__llvm_prf_cnts_start = .;				\
+		*(__llvm_prf_cnts)					\
+		__llvm_prf_cnts_end = .;				\
+	}								\
+	__llvm_prf_names : AT(ADDR(__llvm_prf_names) - LOAD_OFFSET) {	\
+		__llvm_prf_names_start = .;				\
+		*(__llvm_prf_names)					\
+		__llvm_prf_names_end = .;				\
+	}								\
+	__llvm_prf_vals : AT(ADDR(__llvm_prf_vals) - LOAD_OFFSET) {	\
+		__llvm_prf_vals_start = .;				\
+		*(__llvm_prf_vals)					\
+		__llvm_prf_vals_end = .;				\
+	}								\
+	__llvm_prf_vnds : AT(ADDR(__llvm_prf_vnds) - LOAD_OFFSET) {	\
+		__llvm_prf_vnds_start = .;				\
+		*(__llvm_prf_vnds)					\
+		__llvm_prf_vnds_end = .;				\
+	}								\
+	__llvm_prf_bits : AT(ADDR(__llvm_prf_bits) - LOAD_OFFSET) {	\
+		__llvm_prf_bits_start = .;				\
+		*(__llvm_prf_bits)					\
+		__llvm_prf_bits_end = .;				\
+	}								\
+	__llvm_covfun : AT(ADDR(__llvm_covfun) - LOAD_OFFSET) {		\
+		__llvm_covfun_start = .;				\
+		*(__llvm_covfun)					\
+		__llvm_covfun_end = .;					\
+	}								\
+	__llvm_covmap : AT(ADDR(__llvm_covmap) - LOAD_OFFSET) {		\
+		__llvm_covmap_start = .;				\
+		*(__llvm_covmap)					\
+		__llvm_covmap_end = .;					\
+		__llvm_prf_end = .;					\
+	}
+#else
+#define INSTR_PROFILE_CLANG_DATA
+#endif
+
 #define KERNEL_DTB()							\
 	STRUCT_ALIGN();							\
 	__dtb_start = .;						\
@@ -1141,6 +1189,7 @@
 		CONSTRUCTORS						\
 	}								\
 	BUG_TABLE							\
+	INSTR_PROFILE_CLANG_DATA
 
 #define INIT_TEXT_SECTION(inittext_align)				\
 	. = ALIGN(inittext_align);					\
