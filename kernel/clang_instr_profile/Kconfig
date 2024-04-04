@@ -50,4 +50,14 @@ config SCC_CLANG
 	  converting it into the indexed vmlinux.profdata. It can then be fed to
 	  llvm-cov to generate coverage reports.
 
+config MCDC_CLANG
+	bool "Enable measuring modified condition/decision coverage (MC/DC)"
+	depends on SCC_CLANG
+	depends on CLANG_VERSION >= 180000
+	help
+	  This option enables measuring modified condition/decision coverage
+	  (MC/DC) with Clang's Source-based Code Coverage.
+
+	  If unsure, say N.
+
 endmenu

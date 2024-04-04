@@ -161,6 +161,18 @@ _c_flags += $(if $(patsubst n%,, \
 endif
 
 #
+# Flag that turns on modified condition/decision coverage (MC/DC) measurement
+# with Clang's Source-based Code Coverage. Enable the flag for a file or
+# directory depending on variables CLANG_INSTR_PROFILE_obj.o and
+# CLANG_INSTR_PROFILE.
+#
+ifeq ($(CONFIG_MCDC_CLANG),y)
+_c_flags += $(if $(patsubst n%,, \
+		$(CLANG_INSTR_PROFILE_$(basetarget).o)$(CLANG_INSTR_PROFILE)y), \
+		$(CFLAGS_MCDC_CLANG))
+endif
+
+#
 # Enable address sanitizer flags for kernel except some files or directories
 # we don't want to check (depends on variables KASAN_SANITIZE_obj.o, KASAN_SANITIZE)
 #
