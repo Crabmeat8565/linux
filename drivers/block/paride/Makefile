@@ -6,6 +6,8 @@
 # Rewritten to use lists instead of if-statements.
 #
 
+CLANG_INSTR_PROFILE_frpw.o := n
+
 obj-$(CONFIG_PARIDE)		+= paride.o
 obj-$(CONFIG_PARIDE_ATEN)	+= aten.o
 obj-$(CONFIG_PARIDE_BPCK)	+= bpck.o
