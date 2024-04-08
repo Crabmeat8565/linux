@@ -112,7 +112,7 @@ struct callthunk_sites {
 	struct alt_instr		*alt_start, *alt_end;
 };
 
-#ifdef CONFIG_CALL_THUNKS_NO
+#ifdef CONFIG_CALL_THUNKS
 extern void callthunks_patch_builtin_calls(void);
 extern void callthunks_patch_module_calls(struct callthunk_sites *sites,
 					  struct module *mod);
