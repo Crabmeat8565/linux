@@ -1,0 +1,29 @@
+# SPDX-License-Identifier: GPL-2.0-only
+menu "Clang's source-based kernel coverage measurement (EXPERIMENTAL)"
+
+config ARCH_HAS_LLVM_COV
+	bool
+
+config LLVM_COV_KERNEL
+	bool "Enable Clang's source-based kernel coverage measurement"
+	depends on DEBUG_FS
+	depends on ARCH_HAS_LLVM_COV
+	depends on CC_IS_CLANG && CLANG_VERSION >= 180000
+	default n
+	help
+	  This option enables Clang's Source-based Code Coverage.
+
+	  If unsure, say N.
+
+	  On a kernel compiled with this option, run your test suites, and
+	  download the raw profile from /sys/kernel/debug/llvm-cov/profraw.
+	  This file can then be converted into the indexed format with
+	  llvm-profdata and used to generate coverage reports with llvm-cov.
+
+	  Note that a kernel compiled with coverage flags will be significantly
+	  larger and run slower.
+
+	  Note that the debugfs filesystem has to be mounted to access the raw
+	  profile.
+
+endmenu
