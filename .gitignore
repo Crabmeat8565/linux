@@ -24,6 +24,11 @@
 *.dwo
 *.elf
 *.gcno
+# Temprorarily added for gcov, lcov {
+*.gcda
+*.gcov
+*.info
+# } // Temprorarily added for gcov, lcov
 *.gz
 *.i
 *.ko
