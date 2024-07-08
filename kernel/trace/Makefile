@@ -30,6 +30,7 @@ endif
 ifdef CONFIG_GCOV_PROFILE_FTRACE
 GCOV_PROFILE := y
 endif
+LLVM_COV_PROFILE := n
 
 # Functions in this file could be invoked from early interrupt
 # code and produce random code coverage.

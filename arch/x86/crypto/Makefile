@@ -117,3 +117,4 @@ $(obj)/%.S: $(src)/%.pl FORCE
 
 # Disable GCOV in odd or sensitive code
 GCOV_PROFILE_curve25519-x86_64.o := n
+LLVM_COV_PROFILE_curve25519-x86_64.o := n
